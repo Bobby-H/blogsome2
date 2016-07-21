@@ -15,5 +15,14 @@
   <%= @blog_post.blog_entry %>
 </p>
 
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-<%= link_to 'Back', blog_posts_path %>
+<div>
+  <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+</div>
+
+<div>
+  <%= render 'comments/form' %>
+</div>
+
+<div>
+  <%= link_to 'Back', blog_posts_path %>
+</div>
