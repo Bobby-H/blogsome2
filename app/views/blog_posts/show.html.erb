@@ -1,28 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog_post.title %>
-</p>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <%= @blog_post.title %>
+    </div>
+    <div class="panel-body">
+      <%= @blog_post.author %>
+      <%= @blog_post.blog_entry %>
+    </div>
+  </div>
 
-<p>
-  <strong>Author:</strong>
-  <%= @blog_post.author %>
-</p>
-
-<p>
-  <strong>Blog entry:</strong>
-  <%= @blog_post.blog_entry %>
-</p>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      Make a Comment
+    </div>
+    <div class="panel-body">
+      <%= render 'comments/form' %>
+    </div>
+  </div>
 
 <div>
   <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-</div>
-
-<div>
-  <%= render 'comments/form' %>
-</div>
-
-<div>
   <%= link_to 'Back', blog_posts_path %>
 </div>
