@@ -12,15 +12,14 @@
   </thead>
 
   <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.author %></td>
-        <td><%= comment.comment_entry %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% @blog.each do |blog| %>
+
+    <% blog.comments.each do |comment| %>
+
+        <p><%= comment.author %></p>
+        <p><%= comment.comment_entry %></p>
     <% end %>
+<% end %>
   </tbody>
 </table>
 
