@@ -7,7 +7,7 @@ namespace :db do
       BlogPost.create!(
       title: Faker::Hipster.sentence,
       author: Faker::Name.name,
-      blog_entry: Faker::Hipster.paragraph(2)
+      blog_entry: Faker::Hipster.paragraph(5)
       )
     end
   end
